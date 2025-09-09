@@ -11,8 +11,11 @@ public class WarmUp {
 	 * @return the number of cards that are hearts
 	 */
 	public static int countHearts(Card[] cards ){
-		// TODO: fill in the method!
-		return -1;
+		int tempCount =0;
+		for(int i=0; i<cards.length;i++){
+			if(cards[i].equals("hearts")){tempCount++;}
+		}
+		return 0;
 	}
 	
 	/**
