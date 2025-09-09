@@ -27,8 +27,11 @@ public class WarmUp {
 	 * @return a new array that is the element-wise sum of the input arrays 
 	 */
 	public static double[] addArraysSameLength(double[] array1, double[] array2){
-		// TODO: fill in the method!
-		return null;
+		double[] resultAdd = new double[array1.length];
+		for(int i=0;i<array1.length;i++){
+			resultAdd[i]= array1[i]+array2[i];
+		}
+		return resultAdd;
 	}
 	
 		
