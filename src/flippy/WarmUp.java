@@ -13,7 +13,7 @@ public class WarmUp {
 	public static int countHearts(Card[] cards ){
 		int tempCount =0;
 		for(int i=0; i<cards.length;i++){
-			if(cards[i].equals("hearts")){tempCount++;}
+			if(cards[i].getSuit().equals("hearts")){tempCount++;}
 		}
 		return tempCount;
 	}
@@ -36,6 +36,7 @@ public class WarmUp {
 	
 		
 	// TODO: write the reverseArray method, including method header and JavaDoc comments
+	
 
 	public static void main(String[] args){
 		/*String[] words = {"I", "love", "my", "CS", "classes", "!"};
@@ -43,5 +44,11 @@ public class WarmUp {
 		System.out.println("Before: " + Arrays.toString(words));
 		reverseArray(words);
 		System.out.println("After: " + Arrays.toString(words));*/
+	     Card[] cards = new Card[4];
+         cards[0] = new Card(1, "clubs");
+         cards[1] = new Card(1, "hearts");
+         cards[2] = new Card(3, "hearts");
+         cards[3] = new Card(2, "diamonds");
+         System.out.println(countHearts(cards));
 	}
 }
