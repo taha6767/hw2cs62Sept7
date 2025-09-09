@@ -36,19 +36,27 @@ public class WarmUp {
 	
 		
 	// TODO: write the reverseArray method, including method header and JavaDoc comments
-	
+	public static void reverseArray (String[]array1){
+		String[] temp = new String[array1.length];
+		int beginningToEnd= 0;
+		//beginningToEnd is used to index from 0 upto length so array1's last value becomes temp's first value and so on
+		for(int i=array1.length-1; i>=0;i--){
+			temp[beginningToEnd]=array1[i];
+			beginningToEnd++;
+		}
+		for(int i=0; i<temp.length;i++){
+			array1[i]=temp[i];
+		}
+		
+		
+	}
 
 	public static void main(String[] args){
-		/*String[] words = {"I", "love", "my", "CS", "classes", "!"};
+		String[] words = {"I", "love", "my", "CS", "classes", "!"};
 		
 		System.out.println("Before: " + Arrays.toString(words));
 		reverseArray(words);
-		System.out.println("After: " + Arrays.toString(words));*/
-	     Card[] cards = new Card[4];
-         cards[0] = new Card(1, "clubs");
-         cards[1] = new Card(1, "hearts");
-         cards[2] = new Card(3, "hearts");
-         cards[3] = new Card(2, "diamonds");
-         System.out.println(countHearts(cards));
+		System.out.println("After: " + Arrays.toString(words));
+	   
 	}
 }
