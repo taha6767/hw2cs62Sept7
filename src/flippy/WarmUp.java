@@ -15,7 +15,7 @@ public class WarmUp {
 		for(int i=0; i<cards.length;i++){
 			if(cards[i].equals("hearts")){tempCount++;}
 		}
-		return 0;
+		return tempCount;
 	}
 	
 	/**
