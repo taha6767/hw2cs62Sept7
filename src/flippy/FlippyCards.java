@@ -117,7 +117,17 @@ public class FlippyCards {
 
 
 	public String toString(){
-		return "cards";
+		String deckCurrent = "";
+		for(int i=0; i<cards.length;i++){
+			if(cards[i].isFaceUp()){
+				deckCurrent += cards[i].getNumber() + " of " +cards[i].getSuit() ;
+			}
+			else{
+				deckCurrent += "FACE-DOWN" ;
+			}
+			deckCurrent += " | ";
+		}
+		return deckCurrent;
 	}
 	public static void main(String[] args){
 		int cardsTotal =4;
