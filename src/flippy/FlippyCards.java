@@ -54,8 +54,30 @@ public class FlippyCards {
 	 * @return the optimal score
 	 */
 	public int calculateOptimalScore(){
-		//TODO: Fill in good stuff here!
-		return 0;
+		int highScore =0;
+		int minValue =-9999;
+		/**
+		 * in the for loop we check if a card has a positive value
+		 * and if a card has a positive value it would definitely be 
+		 * part of the cards that we want so we add it to the high score
+		 * and if the value is negative we don't want it so we don't add it to the score
+		 * if all the cards are negative we have to find the smalles one and return that
+		 */
+		for(int i=0;i<cards.length;i++){
+			if(cards[i].getFlippyCardValue()>0){
+				highScore +=cards[i].getFlippyCardValue();
+			}
+			else{
+				if(cards[i].getFlippyCardValue()>minValue){
+					minValue= cards[i].getFlippyCardValue();
+				}
+			}
+		}
+		if(highScore > 0){
+			return highScore;
+		}
+		return minValue;
+		
 	}
 
 
