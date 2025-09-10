@@ -44,7 +44,7 @@ public class FlippyCards {
 	 * @param cardIndex the index of the card to flip over
 	 */
 	public void flipCard(int cardIndex) {
-		//TODO: Fill in good stuff here!
+		this.cards[cardIndex].flip();
 	}
 
 	/**
