@@ -115,7 +115,12 @@ public class FlippyCards {
 		return score;
 	}
 
-
+	/**
+	 * Overrides the defualt toString function
+	 * @return's a String in the format of 
+	 * "8 of diamonds | 7 of hearts | FACE-DOWN | Jack of hearts | FACE-DOWN | "
+	 * as example
+	 */
 	public String toString(){
 		String deckCurrent = "";
 		for(int i=0; i<cards.length;i++){
