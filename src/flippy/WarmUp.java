@@ -9,6 +9,7 @@ public class WarmUp {
 	 * 
 	 * @param cards an array of cards
 	 * @return the number of cards that are hearts
+	 * @author Taha
 	 */
 	public static int countHearts(Card[] cards ){
 		int tempCount =0;

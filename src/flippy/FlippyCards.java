@@ -8,7 +8,7 @@ package flippy;
  * (clubs and spades) award negative points.  Cards 2-10 have points worth 
  * their face value, Jack, Queen and King 10 and Ace 11.
  * 
- * @author 
+ * @author Taha
  *
  */
 public class FlippyCards {

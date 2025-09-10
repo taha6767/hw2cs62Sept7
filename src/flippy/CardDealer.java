@@ -4,6 +4,7 @@ import java.util.Random;
 
 /**
  * A basic class to handle dealing and shuffling cards from one or more decks of cards
+ * @author Taha
  */
 public class CardDealer{
 	private static final int CARDS_PER_SUIT = 13;  // the number of cards in the deck

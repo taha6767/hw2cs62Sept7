@@ -3,6 +3,7 @@ package flippy;
 /**
  * A card class representing a standard playing card with
  * numbers 2-10, Jack, Queen, King, Ace and four suits.
+ * @author Taha
  * 
  *
  */
@@ -128,7 +129,12 @@ public class Card {
 	 * @return the flippy card value
 	 */
 	public int getFlippyCardValue(){
-		//TODO: Fill in good stuff here!
+		String currentSuit = this.getSuit();
+		int currentValue = this.getNumber();
+		int plusOrMinus = 0; //this will be used at the end to return 
+		//either a positive or a negative value
+		if(currentSuit.equals(currentSuit))
+
 		return 0;
 	}
 	
