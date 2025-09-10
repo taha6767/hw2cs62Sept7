@@ -35,14 +35,25 @@ public class WarmUp {
 	}
 	
 		
-	// TODO: write the reverseArray method, including method header and JavaDoc comments
+	/**
+	 * Reverses the order of elements in an array of Strings. 
+	 * @param array1
+	 * @return nothing is returned the @param is changed itself.
+	 */
 	public static void reverseArray (String[]array1){
 		String[] temp = new String[array1.length];
 		int beginningToEnd= 0;
-		//beginningToEnd is used to index from 0 upto length so array1's last value becomes temp's first value and so on
+		/**
+		*beginningToEnd is used to index from 0 upto the length of the array-1 so that array1's 
+		*last value becomes temp's first value and so on
+		*/
 		for(int i=array1.length-1; i>=0;i--){
 			temp[beginningToEnd]=array1[i];
 			beginningToEnd++;
+			/**
+			 * beginningToEnd goes from 0 to length-1 while i goes from length-1
+			 *  to 0 that's how String array 'temp' becomes the reverse of 'array1'
+			 */
 		}
 		for(int i=0; i<temp.length;i++){
 			array1[i]=temp[i];
