@@ -130,12 +130,28 @@ public class Card {
 	 */
 	public int getFlippyCardValue(){
 		String currentSuit = this.getSuit();
-		int currentValue = this.getNumber();
-		int plusOrMinus = 0; //this will be used at the end to return 
-		//either a positive or a negative value
-		if(currentSuit.equals(currentSuit))
+		String currentValue = this.getNumber();
+		int plusOrMinus = 0; 
+		/**
+		*plusOrMinus will be either 1 or -1 and used at the end to return 
+		*either a positive or a negative value
+		*/
+		if(currentSuit.equals("hearts")||currentSuit.equals("diamonds")){
+			plusOrMinus= 1;
+		}
+		else
+			plusOrMinus=-1;
+		if(currentValue.equals("Ace")){
+			return 11*plusOrMinus;
+		}
+		else if(currentValue.equals("King")||currentValue.equals("Queen")||currentValue.equals("Jack")){
+			return 10*plusOrMinus;
+		}
+		else{
+			return Integer.parseInt(currentValue)*plusOrMinus;
+		}
 
-		return 0;
+		
 	}
 	
 	/**
@@ -147,4 +163,17 @@ public class Card {
 		//TODO: Fill in good stuff here!
 		return false;
 	}
-}
+	public static void main(String[]args){
+		Card card1 = new Card(4,"diamonds");
+		Card card2 = new Card(1,"spades");
+		Card card3 = new Card(12,"hearts");
+
+		
+		System.out.println(card3.getFlippyCardValue());
+		System.out.println(card3.getSuit());
+		System.out.println(card3.getNumber());
+
+
+	
+	}
+}	
