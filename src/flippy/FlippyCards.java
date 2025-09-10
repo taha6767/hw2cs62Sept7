@@ -116,7 +116,9 @@ public class FlippyCards {
 	}
 
 
-	//TODO: Add a toString method here!
+	public String toString(){
+		return "cards";
+	}
 	public static void main(String[] args){
 		int cardsTotal =4;
 		FlippyCards game1 = new FlippyCards(cardsTotal);
