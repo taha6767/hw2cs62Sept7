@@ -160,7 +160,10 @@ public class Card {
 	 * @return whether or not the card is red
 	 */
 	public boolean isRedCard(){
-		//TODO: Fill in good stuff here!
+
+		if(this.getSuit().equals("hearts")||this.getSuit().equals("diamonds")){
+			return true;
+		}
 		return false;
 	}
 	public static void main(String[]args){
@@ -172,6 +175,7 @@ public class Card {
 		System.out.println(card3.getFlippyCardValue());
 		System.out.println(card3.getSuit());
 		System.out.println(card3.getNumber());
+		System.out.println(card2.isRedCard());
 
 
 	

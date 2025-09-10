@@ -21,7 +21,11 @@ public class FlippyCards {
 	 * @param numCards number of cards in the game
 	 */
 	public FlippyCards(int numCards){
-		// TODO: Fill in good stuff here!
+		this.cards = new Card[numCards];
+		CardDealer dealer = new CardDealer(2);
+		for(int i=0; i<numCards;i++){
+			this.cards[i]=dealer.next();
+		}
 	}
 
 	/**
@@ -30,8 +34,7 @@ public class FlippyCards {
 	 * @return the flippy card at the given index
 	 */
 	public Card getCard(int index) {
-		// TODO: Fill in good stuff here!
-		return null;
+		return cards[index];
 	}
 	
 	/**
@@ -80,4 +83,14 @@ public class FlippyCards {
 
 
 	//TODO: Add a toString method here!
+	public static void main(String[] args){
+		int cardsTotal =4;
+		FlippyCards game1 = new FlippyCards(cardsTotal);
+		for(int i=0;i<cardsTotal;i++){
+		System.out.println(game1.getCard(i).getFlippyCardValue());
+		System.out.println(game1.getCard(i).getSuit());
+		System.out.println(game1.getCard(i).getNumber());
+			
+		}
+	}
 }
